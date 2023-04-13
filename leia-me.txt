@@ -1,0 +1,7 @@
+docker-compose up -d --build
+
+
+    Adianti: http://localhost
+    
+    PHP MyAdmin: http://localhost:8183
+

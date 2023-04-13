@@ -1,0 +1,820 @@
+<menu>
+    <menuitem label='Mês Referência'>
+        <icon></icon>
+        <action>MesRefImovel</action>
+    </menuitem>
+    <menuitem label='Mês Ref.'>
+        <icon></icon>
+        <action>MesRef</action>
+    </menuitem>
+    
+    <menuitem label="Agenda">
+      <icon></icon>
+      <action>ProspeccaoCalendarFormView</action>
+    </menuitem>
+    
+    <menuitem label="2a Via Boleto">
+      <icon></icon>
+      <action>SegundaViaBoletos</action>
+    </menuitem>
+    
+    <menuitem label='Reserva'>
+        <icon></icon>
+        <menu>
+            <menuitem label='Area Comum'>
+                <icon></icon>
+                <action>AreaComumList</action>
+            </menuitem>
+            <menuitem label='Reserva'>
+                <icon></icon>
+                <action>ReservaList</action>
+            </menuitem>
+         </menu>
+    </menuitem>    
+            
+     <menuitem label='Aplicativo'>
+        <icon></icon>
+        <menu>
+            <menuitem label='Upload Arquivo'>
+                <icon></icon>
+                <action>ArquivoCondominioFormList</action>
+            </menuitem>
+            <menuitem label='Comunicação'>
+                <icon></icon>
+                <action>ComunicacaoFormList</action>
+            </menuitem> 
+            <menuitem label="Agenda">
+              <icon></icon>
+              <action>ProspeccaoCalendarFormView</action>
+            </menuitem>
+            <menuitem label='Ocorrências'> 
+               <icon></icon>
+               <menu>
+                   <menuitem label='Nova'>
+                       <action>OcorrenciaUnidadeForm</action>
+                   </menuitem>
+                   <menuitem label='Listagem'>
+                       <action>OcorrenciaUnidadeList</action>
+                   </menuitem>
+                   <menuitem label='Relatório'>
+                       <action>OcorrenciasCobrancaReport</action>
+                   </menuitem>
+               </menu>
+            </menuitem>
+            <menuitem label='Autorização Acesso'>
+                <icon></icon> 
+                <action>AutorizacaoAcessoFormList</action>
+            </menuitem>
+            <menuitem label='Reserva'>
+               <icon></icon>
+               <menu>
+                   <menuitem label='Area Comum'>
+                       <icon></icon>
+                       <action>AreaComumList</action>
+                   </menuitem>
+                   <menuitem label='Reserva'>
+                       <icon></icon>
+                       <action>ReservaList</action>
+                   </menuitem>
+               </menu>
+            </menuitem>
+            <menuitem label='App'>
+                <icon></icon>
+                <action>AppControllerFormList</action>
+            </menuitem>
+            <menuitem label='App List'>
+                <icon></icon>
+                <action>AppControllerList</action>
+            </menuitem>      
+        </menu>
+        
+    </menuitem>
+    
+    <menuitem label='Boletos'>
+        <icon></icon>
+        <menu>
+            <menuitem label='Layout CNAB'>
+                <icon></icon>
+                <action>LayoutCnabList</action>
+            </menuitem>
+            <menuitem label='Banco'>
+                <icon></icon>
+                <action>BancoList</action>
+            </menuitem>
+            <menuitem label='Conta Corrente'>
+                <icon></icon>
+                <action>ContaCorrenteList</action>
+            </menuitem>
+          <menuitem label="Remessa">
+            <icon>fas:money-bill-wave fas:fw</icon>
+            <action>FinRemessaList</action>
+          </menuitem>
+          <menuitem label="Remessa Envio">
+            <icon>fas:money-bill-wave fas:fw</icon>
+            <action>FinRemessaEnvio</action>
+          </menuitem>
+          <menuitem label="Retorno Arquivo">
+            <icon>fas:money-bill-wave fas:fw</icon>
+            <action>FinRetornoBuscaArquivo</action>
+          </menuitem>
+          <menuitem label="Retorno Relatorio">
+            <icon>fas:money-bill-wave fas:fw</icon>
+            <action>FinRetornoReport</action>
+          </menuitem>
+          <menuitem label="Retorno Baixa">
+            <icon>fas:money-bill-wave fas:fw</icon>
+            <action>FinRetornoBaixaTitulos</action>
+          </menuitem>
+          <menuitem label="Boleto Form">
+            <icon>fas:money-bill-wave fas:fw</icon>
+            <action>BoletoForm</action>
+          </menuitem>
+        </menu>
+    </menuitem>   
+         
+    <menuitem label='PJBank'>
+        <icon></icon>
+        <menu>
+            <menuitem label='Boletos'>
+                <icon></icon>
+                <action>BoletosListagem</action>
+            </menuitem>
+            <menuitem label='Carnê'>
+                <icon></icon>
+                <action>VwBoletospjbankList</action>
+            </menuitem>
+            <menuitem label='Vínculo'>
+                <icon></icon>
+                <action>BoletosListagemVinculo</action>
+            </menuitem>
+            <menuitem label='Baixar Geral'>
+                <icon></icon>
+                <action>BaixarPJBankListagemGeral</action>
+            </menuitem>
+            <menuitem label='Baixar Individual'>
+                <icon></icon>
+                <action>BaixarPJBankListagem</action>
+            </menuitem>
+            <menuitem label='Conferência'>
+                <icon></icon>
+                <action>ContasReceberReportConfBoleto</action>
+            </menuitem>
+            <menuitem label='Tratar Arquivo'>
+               <icon></icon>
+               <action>TrataRetornoRemessa</action>
+             </menuitem>
+             <menuitem label='Nosso Número Vazio'>
+               <icon></icon>
+               <action>ContasReceberReportListNossoNumeroVazio</action>
+             </menuitem>
+             <menuitem label='Nosso Número'>
+               <icon></icon>
+               <action>ContasReceberListNossoNumero</action>
+             </menuitem>
+             <menuitem label='Gerar Boleto Alfa'>
+               <icon></icon>
+               <action>ListagerarboletosReport</action>
+             </menuitem>
+             <menuitem label='Gerar Boleto Lote'>
+               <icon></icon>
+               <action>ListagerarboletosReportLote</action>
+             </menuitem>
+             
+            </menu>
+    </menuitem>
+
+    <menuitem label='E-mail'> 
+        <icon>fa:envelope-open orange</icon>
+        <menu>
+            <menuitem label='Aviso Vencimento'>
+                 <icon>fa:circle-o fa-fw</icon>
+                 <action>AvisoVencimento</action>
+            </menuitem>
+            <menuitem label='Envio Boleto'>
+                 <icon>fa:circle-o fa-fw</icon>
+                 <action>BoletoEmail</action>
+            </menuitem>
+        </menu>
+    </menuitem>
+
+    <menuitem label='Financeiro'>
+        <icon></icon>
+        <menu>
+            <menuitem label='Receita'>
+                <menu>
+                    <menuitem label='Lança Manual'>
+                        <icon>fa:circle-o fa-fw</icon>
+                         <action>ContasReceberForm</action>
+                    </menuitem>
+                    <menuitem label='Lanc. Lote'>
+                      <icon>fa:circle-o fa-fw</icon>
+                      <action>ContasReceberFormLancaLote</action>
+                    </menuitem>
+                    <menuitem label='Listagem'>
+                        <icon>fa:circle-o fa-fw</icon>
+                        <action>ContasReceberListagem</action>
+                    </menuitem>
+                    <menuitem label='Baixar Lote'>
+                        <icon>fa:circle-o fa-fw</icon>
+                        <action>ContasReceberSelListBxLote2</action>
+                    </menuitem>  
+                    <menuitem label='Lista Cobrança'>
+                        <icon>fa:circle-o fa-fw</icon>
+                         <action>CobrancaList</action>
+                    </menuitem> 
+                    <menuitem label='Inadimplentes'>
+                        <icon>fa:circle-o fa-fw</icon>
+                         <action>VwContasreceberlistcobrancaList</action>
+                    </menuitem>  
+                    
+                    <menuitem label='Grupo de Rateio'>
+                        <icon>fa:circle-o fa-fw</icon>
+                        <action>GrupoContasReceberForm</action>
+                    </menuitem>
+                    <menuitem label='Conferência'>
+                        <icon>fa:circle-o fa-fw</icon>
+                        <action>ContasReceberConferenciaMes</action>
+                   </menuitem>
+                   <menuitem label='Consulta'>
+                        <icon>fa:circle-o fa-fw</icon>
+                        <action>ContasReceberConferenciaMesIncorporadora</action>
+                   </menuitem>
+                </menu>        
+            </menuitem>
+            
+            <menuitem label='Acordo'>
+            <menu>
+                <menuitem label='Novo'>
+                    <icon></icon>
+                     <action>ContasReceberCriarAcordo</action>
+                </menuitem>
+                <menuitem label='Listagem'>
+                    <icon></icon>
+                     <action>AcordoList</action>
+                </menuitem>
+                <menuitem label='Altera Vencimento'>
+                    <icon></icon>
+                     <action>ContasReceberUpdateListAcordo</action>
+                </menuitem>
+            </menu>
+        </menuitem>
+        
+            <menuitem label='Despesa'>
+                <menu>
+                    <menuitem label='Lançamento'>
+                        <icon>fa:circle-o fa-fw</icon>
+                         <action>ContasPagarForm</action>
+                    </menuitem>
+                    <menuitem label='Listagem'>
+                        <icon>fa:circle-o fa-fw</icon>
+                         <action>ContasPagarList</action>
+                    </menuitem>
+                    <menuitem label='Baixar Lote'>
+                        <icon>fa:circle-o fa-fw</icon>
+                         <action>ContasPagarSelectionList</action>
+                    </menuitem>
+                    <menuitem label='Conferência'>
+                        <icon>fa:circle-o fa-fw</icon>
+                         <action>ContasPagarListDescricao</action>
+                    </menuitem>
+                    <menuitem label='Pagas'>
+                        <icon>fa:circle-o fa-fw</icon>
+                         <action>ContasPagarListPagas</action>
+                    </menuitem>
+                    <menuitem label='Cheques'>
+                        <icon>fa:circle-o fa-fw</icon>
+                         <action>ChequeList</action>
+                    </menuitem>
+                </menu>        
+            </menuitem>
+            
+            <menuitem label='Fechamentos'>
+                <icon></icon>
+                <action>FechamentoList</action>
+            </menuitem>
+            
+            <menuitem label='Conciliação OFX'>
+                <icon></icon>
+                <action>LerOfxConciliacao</action>
+            </menuitem>
+            
+            <menuitem label='Conta Digital'>
+                <menu>
+                    <menuitem label='Inserir Documento'>
+                        <icon>fa:circle-o fa-fw</icon>
+                         <action>InserirDocCDPJBank</action>
+                    </menuitem>
+                    <menuitem label='Convidar Admin'>
+                        <icon>fa:circle-o fa-fw</icon>
+                         <action>ConvidarAdministradorCDPJBank</action>
+                    </menuitem>
+                    <menuitem label='Lista Doc'>
+                        <icon>fa:circle-o fa-fw</icon>
+                         <action>ListaDocCDPJBank</action>
+                    </menuitem>
+                </menu>        
+            </menuitem>
+            
+                       
+        </menu>
+    </menuitem>
+
+       <menuitem label='Relatórios'>
+           <icon></icon>
+            <menu>
+            <menuitem label='Protocolo Alfa'>
+                <icon></icon>
+                <action>ProtocoloReportAlfa</action>
+            </menuitem>
+            <menuitem label='Receitas'>
+                <menu>
+                    <menuitem label='A Vencer'>
+                        <icon></icon>
+                        <action>ContasReceberRelAVencer</action>
+                    </menuitem>
+                    <menuitem label='Data Crédito'>
+                        <icon></icon>
+                        <action>ContasReceberRelLiqDataCredito</action>
+                    </menuitem>
+                    <menuitem label='Data Pagamento'>
+                        <icon></icon>
+                        <action>ContasReceberRelLiqDataPagamento</action>
+                    </menuitem>
+                    <menuitem label='Data/Unidade'>
+                        <icon></icon>
+                        <action>ContasReceberRelPagData</action>
+                    </menuitem>
+                    <menuitem label='Unidade'>
+                        <icon></icon>
+                        <action>ContasReceberReportPagamento</action>
+                    </menuitem>
+                    <menuitem label='Receita Unidade'>
+                        <icon></icon>
+                        <action>ContasReceberReportPagamentoUnidade</action>
+                    </menuitem>
+                    <menuitem label='Simplificado'>
+                        <icon></icon>
+                        <action>ContasReceberReportPagamentoSimplificadoNomeUnidade</action>
+                    </menuitem>
+                    <menuitem label='Simplificado Mês Ref'>
+                        <icon></icon>
+                        <action>ContasReceberReportPagamentoSimplificadoNomeUnidadeMesRef</action>
+                    </menuitem>
+                    <menuitem label='Data/Unid/Nome'>
+                        <icon></icon>
+                        <action>ContasReceberRelPagDataUnidNome</action>
+                    </menuitem>
+                </menu>        
+            </menuitem>
+            
+            <menuitem label='Acordos'>
+                <menu>
+                    <menuitem label='Buscar'>
+                        <icon></icon>
+                         <action>AcordoList</action>
+                    </menuitem>
+                </menu>
+            </menuitem>
+        
+            <menuitem label='Despesas'>
+                <menu>
+                    <menuitem label='Geral'>
+                        <icon></icon>
+                        <action>ContasPagarRelPeriodo</action>
+                    </menuitem>
+                    <menuitem label='A Vencer'>
+                        <icon></icon>
+                        <action>ContasPagarRelAVencer</action>
+                    </menuitem>
+                    <menuitem label='Liquidadas'>
+                        <icon></icon>
+                        <action>ContasPagarRelLiquidadas</action>
+                    </menuitem>
+                    <menuitem label='Cheques Emitidos'>
+                        <icon></icon>
+                         <action>ChequesEmitidos</action>
+                    </menuitem>
+                </menu>        
+            </menuitem>
+            
+            <menuitem label='Demonstrativo'>
+                <menu>
+                    <menuitem label='Analítico 2'>
+                        <icon></icon>
+                         <action>DemonstrativoFinanceiroReportDetalhado</action>
+                    </menuitem>
+                    <menuitem label='Analítico'>
+                        <icon></icon>
+                         <action>DemonstrativoFinanceiroReport1</action>
+                    </menuitem>
+                    <menuitem label='Analítico HTML'>
+                        <icon></icon>
+                         <action>DemonstrativoFinanceiroReport1HTML</action>
+                    </menuitem>
+                    <menuitem label='Sintetico'>
+                        <icon></icon>
+                         <action>DemonstrativoRD</action>
+                    </menuitem>
+                </menu>        
+            </menuitem>
+            
+                        
+            <menuitem label='Inadimplência'>
+                <menu>
+                    <menuitem label='Detalhada'>
+                        <icon></icon>
+                        <action>ContasReceberReportInadim</action>
+                    </menuitem>
+                    <menuitem label='Detalhada Responsável'>
+                        <icon></icon>
+                        <action>ContasReceberReportInadimResponsavel</action>
+                    </menuitem>
+                    <menuitem label='Inadimplência'>
+                      <icon></icon>
+                      <action>ContasReceberListInadUnid</action>
+                    </menuitem>
+                </menu>        
+            </menuitem>
+
+            <menuitem label='Gráficos'>
+                <menu>
+                    <menuitem label='Receita'>
+                        <icon></icon>
+                         <action>GraficoEvolucaoCotaMes</action>
+                    </menuitem>
+                    
+                    <menuitem label='Dashboard'>
+                        <icon></icon>
+                         <action>DashboardViewFechamento</action>
+                    </menuitem>
+                    
+                    <menuitem label='Gráfico Resultado Mês'>
+                        <icon></icon>
+                         <action>GraficoReceitaDespesasResultado</action>
+                    </menuitem>
+                    
+                    <menuitem label='Gráfico Receita/Despesa'>
+                        <icon></icon>
+                         <action>GraficoReceitaDespesa</action>
+                    </menuitem>
+                    
+                    <menuitem label='Gráfico Receita por Data'>
+                        <icon></icon>
+                         <action>GraficoReceitaPorData</action>
+                    </menuitem>
+
+                    <menuitem label='Gráfico Receita Mês'>
+                        <icon></icon>
+                         <action>ReceitaMesChartView</action>
+                    </menuitem>
+
+                    <menuitem label='Gráfico Despesa Mês'>
+                        <icon></icon>
+                         <action>DespesaMesChartView</action>
+                    </menuitem>
+                    
+                    <menuitem label='Arrecadação Atual'>
+                        <icon></icon>
+                         <action>ReceitaAtualChartView</action>
+                    </menuitem>
+                </menu>        
+            </menuitem>
+
+           
+        </menu>
+    </menuitem>
+   
+    <menuitem label='Cadastro'>
+        <icon></icon>
+        <menu>
+            <menuitem label='Condomínio'>
+              <icon></icon>
+              <action>CondominioList</action>
+            </menuitem>
+            <menuitem label='Pessoa'>
+              <icon></icon>
+              <action>PessoaList</action>
+            </menuitem>
+            <menuitem label='Unidade'>
+              <icon></icon>
+              <action>UnidadeList</action>
+            </menuitem>
+            <menuitem label='Plano Contas'>
+                <icon></icon>
+                <action>PlanoContasFormList</action>
+            </menuitem>
+                
+           <menuitem label='Conta Fechamento'>
+                <icon></icon>
+                <action>ContaFechamentoList</action>
+           </menuitem>
+           
+        </menu>
+    </menuitem>
+    
+        
+    <menuitem label='Portaria'> 
+        <icon></icon>
+        <menu>
+            <menuitem label='Registro Ocorrência'>
+                <icon>fa:book green</icon>
+                <action>LivroOcorrenciaMoradorForm</action>
+            </menuitem>
+            <menuitem label='Lista Ocorrências'>
+                <icon>fa:book orange</icon>
+                <action>LivroOcorrenciaList</action>
+            </menuitem>
+            <menuitem label='Diário Portaria'>
+              <icon>fa:comments-o</icon>
+              <action>DiarioPortariaForm</action>
+            </menuitem>
+            <menuitem label='Lista Diários Portaria'>
+               <icon>fa:user-secret</icon>
+               <action>DiarioPortariaList</action>
+            </menuitem> 
+            <menuitem label='Consulta Unidade'>
+              <icon>fa:search</icon>
+              <action>MoradorList</action>
+            </menuitem>
+            <menuitem label='Listagem Acessos Portaria'>
+              <icon>fa:print</icon>
+              <action>UnidadeAcessoPortariaList</action>
+            </menuitem>
+            <menuitem label='Relatório Acessos Portaria'>
+              <icon>fa:print</icon>
+              <action>UnidadesReportAcessoPortaria</action>
+            </menuitem>
+        </menu>
+    </menuitem>
+    
+    <menuitem label='Morador'> 
+        <icon></icon>
+        <menu>
+            <menuitem label='Serviços'>
+                <icon>fa:wrench</icon>
+                <action>ServicoView</action>
+            </menuitem>
+            <menuitem label='Colaboradores'>
+                <icon>fa:users</icon>
+                <action>ColaboradorView</action>
+            </menuitem>
+            <menuitem label='Autorização Acesso'>
+                <icon></icon> 
+                <action>AutorizacaoAcessoFormList</action>
+            </menuitem> 
+          </menu>
+    </menuitem>
+    
+    <menuitem label='Gestor'> 
+        <icon></icon>
+        <menu>
+            <menuitem label="Previsão Receita">
+                <action>PrevisaoRecebimento</action>
+            </menuitem>
+  
+            <menuitem label='E-mail'> 
+                <icon></icon>
+                <menu>
+                    <menuitem label='Aviso Vencimento'>
+                        <icon>fa:circle-o fa-fw</icon>
+                         <action>AvisoVencimento</action>
+                    </menuitem>
+                </menu>
+            </menuitem>
+            <menuitem label='Arrecadação Atual'>
+                 <icon>fa:circle-o fa-fw</icon>
+                 <action>ReceitaAtualChartView</action>
+            </menuitem>
+            <menuitem label='Quadro Aviso'>
+                 <icon>fa:eye blue</icon>
+                 <action>QuadroAvisoView</action>
+           </menuitem>
+           <menuitem label='Documentos'>
+                 <icon>fa:eye blue</icon>
+                 <action>ArquivoList</action>
+           </menuitem>
+           <menuitem label='Vistorias'>
+                 <icon>fa:eye blue</icon>
+                 <action>VistoriaList</action>
+           </menuitem>
+            <menuitem label='Chaves PJBank'>
+                <icon></icon> 
+                <action>chaves_pjbank</action>
+            </menuitem>  
+            <menuitem label='Usuário Condomínio'>
+                <icon></icon> 
+                <action>UsuarioCondominioFormList</action>
+            </menuitem>  
+            <menuitem label='Ações Usuarios'>
+                <icon></icon> 
+                <action>UsuarioImovelSelectionList</action>
+            </menuitem>  
+           <menuitem label='Avisos Administrativos'>
+             <icon></icon>
+             <action>AvisoFormList</action>
+           </menuitem>  
+           <menuitem label='Estatística Acesso'>
+                <icon></icon> 
+                <action>LogSystemAccessLogStats</action>
+            </menuitem>  
+           <menuitem label='Notícias'>
+                <icon></icon> 
+                <action>ExibeNoticia</action>
+           </menuitem> 
+           <menuitem label='Edita Unid.Gera Bol.'>
+                <icon></icon> 
+                <action>UnidadeUpdateGeraBoleto</action>
+           </menuitem>
+           <menuitem label='Edita Bl/Qd Unidade'>
+                <icon></icon> 
+                <action>UnidadeUpdateListBlocoQuadra</action>
+           </menuitem>
+           <menuitem label='Edita Desc Unidade'>
+                <icon></icon> 
+                <action>UnidadeUpdateListDesc</action>
+           </menuitem>
+           <menuitem label='Edita Descrição(D)'>
+               <icon>fa:circle-o fa-fw</icon>
+               <action>ContasPagarUpdateList</action>
+           </menuitem>
+           <menuitem label='Atualizar Doc Pag'>
+               <icon>fa:circle-o fa-fw</icon>
+               <action>ContasPagarUpdateListDocPag</action>
+           </menuitem>
+           <menuitem label='Edita Descrição(R)'>
+               <icon>fa:circle-o fa-fw</icon>
+               <action>ContasReceberUpdateListDesc</action>
+           </menuitem>
+           <menuitem label='Edita Valor(R)'>
+               <icon>fa:circle-o fa-fw</icon>
+               <action>ContasReceberUpdateListValor</action>
+           </menuitem>
+           <menuitem label='Edita Desconto(R)'>
+               <icon>fa:circle-o fa-fw</icon>
+               <action>ContasReceberUpdateListDesconto</action>
+           </menuitem>
+           <menuitem label='Edita Descrição 2(R)'>
+               <icon>fa:circle-o fa-fw</icon>
+               <action>ContasReceberUpdateListDescricao</action>
+           </menuitem>
+           <menuitem label='Edição Nosso Número'>
+              <icon></icon>
+              <action>ContasReceberUpdateListNossoNumero</action>
+           </menuitem>
+           <menuitem label='Rel. Pessoas'>
+              <icon></icon>
+              <action>PessoaReport</action>
+           </menuitem>                       
+           <menuitem label='Importar Unidades'>
+              <action>ImportarUnidades</action>
+           </menuitem> 
+           <menuitem label='Importar Inadimplência'>
+              <action>ImportarInadimplencia</action>
+           </menuitem> 
+           <menuitem label='Pessoas'>
+              <action>PessoaListGeral</action>
+           </menuitem>
+           <menuitem label='Fechamentos'>
+              <action>FechamentoListConferencia</action>
+           </menuitem>
+           <menuitem label='Exclui Cts Receber'>
+              <action>ContasReceberListExcluir</action>
+           </menuitem>
+           <menuitem label='Edit Unidade (R)'>
+              <action>ContasReceberUpdateListUnid</action>
+           </menuitem>
+           <menuitem label='Conta Fechamento(R)'>
+              <action>ContasReceberUpdateListCtaFech</action>
+           </menuitem>
+           <menuitem label='Retorno SICRED'>
+              <action>LerRetornoSicred</action>
+           </menuitem>
+           <menuitem label='Teste Retorno'>
+               <icon></icon>
+               <action>LerRetorno</action>
+           </menuitem>
+           <menuitem label='Edita Pessoas'>
+             <icon></icon>
+             <action>PessoaUpdateList</action>
+           </menuitem>
+           <menuitem label='App'>
+             <icon></icon>
+             <action>AppControllerFormList</action>
+           </menuitem>
+           <menuitem label='App List'>
+             <icon></icon>
+             <action>AppControllerList</action>
+           </menuitem>
+       </menu>                   
+    </menuitem>
+    
+        
+    
+    
+    <menuitem label='_t{Administration}'>
+        <icon></icon>
+        <menu>
+              <menuitem label='Dashboard'>
+                  <icon>fas:tachometer-alt fa-fw</icon>
+                  <action>SystemAdministrationDashboard</action>
+              </menuitem>
+              <menuitem label='_t{Programs}'>
+                  <icon>far:file-code fa-fw</icon>
+                  <action>SystemProgramList</action>
+              </menuitem>
+              <menuitem label='_t{Groups}'>
+                  <icon>fas:users fa-fw</icon>
+                  <action>SystemGroupList</action>
+              </menuitem>
+              <menuitem label='_t{Units}'>
+                  <icon>fas:university fa-fw</icon>
+                  <action>SystemUnitList</action>
+              </menuitem>
+              <menuitem label='_t{Users}'>
+                  <icon>fas:user fa-fw</icon>
+                  <action>SystemUserList</action>
+              </menuitem>
+              <menuitem label='_t{Database explorer}'>
+                  <icon>fas:database fa-fw</icon>
+                  <action>SystemDatabaseExplorer</action>
+              </menuitem>
+              <menuitem label='_t{SQL Panel}'>
+                  <icon>fas:table fa-fw</icon>
+                  <action>SystemSQLPanel</action>
+              </menuitem>
+              <menuitem label='_t{Menu editor}'>
+                  <icon>far:edit fa-fw</icon>
+                  <action>SystemMenuEditor</action>
+              </menuitem>
+              <menuitem label='PHP Info'>
+                  <icon>fas:info-circle fa-fw</icon>
+                  <action>SystemPHPInfoView</action>
+              </menuitem>
+              <menuitem label='_t{Preferences}'>
+                  <icon>fas:cog fa-fw</icon>
+                  <action>SystemPreferenceForm#method=onEdit</action>
+              </menuitem>
+        </menu>
+    </menuitem>
+    
+    <menuitem label='_t{Documents}'>
+        <icon></icon>
+        <menu>
+              <menuitem label='_t{Send document}'>
+                  <icon>fas:cloud-upload-alt fa-fw</icon>
+                  <action>SystemDocumentUploadForm</action>
+              </menuitem>
+              <menuitem label='_t{My documents}'>
+                  <icon>fas:archive fa-fw</icon>
+                  <action>SystemDocumentList</action>
+              </menuitem>
+              <menuitem label='_t{Shared with me}'>
+                  <icon>fas:share-alt fa-fw</icon>
+                  <action>SystemSharedDocumentList</action>
+              </menuitem>
+              <menuitem label='_t{Categories}'>
+                  <icon>fas:th fa-fw</icon>
+                  <action>SystemDocumentCategoryFormList</action>
+              </menuitem>
+        </menu>
+    </menuitem>
+    
+    <menuitem label='Logs'>
+        <icon></icon>
+        <menu>
+              <menuitem label='Dashboard'>
+                  <icon>fas:tachometer-alt fa-fw</icon>
+                  <action>SystemLogDashboard</action>
+              </menuitem>
+              <menuitem label='_t{Access Log}'>
+                  <icon>fas:key fa-fw</icon>
+                  <action>SystemAccessLogList</action>
+              </menuitem>
+              <menuitem label='_t{Change Log}'>
+                  <icon>fas:film fa-fw</icon>
+                  <action>SystemChangeLogView</action>
+              </menuitem>
+              <menuitem label='_t{SQL Log}'>
+                  <icon>fas:database fa-fw</icon>
+                  <action>SystemSqlLogList</action>
+              </menuitem>
+              <menuitem label='_t{Request Log}'>
+                  <icon>fas:globe fa-fw</icon>
+                  <action>SystemRequestLogList</action>
+              </menuitem>
+              <menuitem label='_t{PHP Log}'>
+                  <icon>fas:exclamation-triangle fa-fw</icon>
+                  <action>SystemPHPErrorLogView</action>
+              </menuitem>
+              <menuitem label='Session dump'>
+                  <icon>fas:code fa-fw</icon>
+                  <action>SystemSessionDumpView</action>
+              </menuitem>
+        </menu>
+    </menuitem>
+    
+    <menuitem label='Logout'>
+        <action>LoginForm#method=onLogout#static=1</action>
+        <icon></icon>
+    </menuitem>
+</menu>

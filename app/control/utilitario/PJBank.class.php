@@ -1,0 +1,130 @@
+<?php
+/**
+ */
+class PJBank extends TPage
+{
+    protected $form; // form
+    
+    /**
+     * Form constructor
+     * @param $param Request
+     */
+    public function __construct( $param )
+    {
+        parent::__construct();
+        
+         $this->form = new BootstrapFormBuilder('form_PJBank');
+        // define the form title
+        
+        $this->form->setFormTitle('PJBank');
+        
+        
+        // create the form actions
+        $this->form->addAction('Consultar Conta', new TAction([$this, 'onSave']), 'fa:floppy-o')->addStyleClass('btn-primary');
+        
+        // vertical box container
+        $container = new TVBox;
+        $container->style = 'width: 100%';
+        $container->class = 'form-container';
+        $container->add(new TXMLBreadCrumb('menu.xml', 'PJBank'));
+        $container->add($this->form);
+  
+        parent::add($container);
+    }
+    
+       
+    /* 
+    */
+    public function onSave( $param )
+        {
+            
+            $credencial = "2b5f712a4d778e98b7dd6f5b2fc100884aaa8fca";
+            $chave = "1ea4a1b03c5d6e7cff635071b38db9fba273b2ca";
+            
+            $PJBankRecebimentos = new pjbank\Recebimento($credencial, $chave);
+
+            echo("Gerando o extrato bancário da conta sem filtros" . PHP_EOL);
+
+            $extrato = $PJBankRecebimentos->Extratos->NovoExtrato();
+            $extrato->gerar();
+
+            print_r($extrato->getItens());
+
+        }
+        
+    public function testCriarSubconta()
+    {
+        $credencial = "eb2af021c5e2448c343965a7a80d7d090eb64164";
+        $chave = "a834d47e283dd12f50a1b3a771603ae9dfd5a32c";
+        
+        $PJBankContaDigital = new pjbank\ContaDigital($credencial, $chave);        
+        $subconta = $PJBankContaDigital->Subcontas->criarSubconta(
+            'Cliente Exemplo', 
+            '11/01/1990', 
+            'M', 
+            '13032385',
+            'Rua Joaquim Vilac',
+            '509',
+            'Vila Teixeira',
+            'Complemento Teste',
+            'Campinas',
+            'SP',
+            '19',
+            '40096800',
+            'api@pjbank.com.br', 
+            'Caixinha', 
+            25.00, 
+            '07727876208'
+        );
+        
+        $this->assertObjectHasAttribute('nosso_numero', $subconta);
+        $this->assertObjectHasAttribute('link_boleto', $subconta);
+        $this->assertObjectHasAttribute('linha_digitavel', $subconta);
+        $this->assertObjectHasAttribute('token_cartao', $subconta);
+        $this->assertObjectHasAttribute('numero_cartao', $subconta);
+    }
+    
+    
+    public function testConsultarSubconta()
+    {
+        $credencial = "eb2af021c5e2448c343965a7a80d7d090eb64164";
+        $chave = "a834d47e283dd12f50a1b3a771603ae9dfd5a32c";
+        $tokenSubconta = "b2240b16b373446935a2a7ab437577a823f22eaa";
+        
+        $PJBankContaDigital = new pjbank\ContaDigital($credencial, $chave);        
+        $subconta = $PJBankContaDigital->Subcontas->consultarSubconta($tokenSubconta);
+        
+        $this->assertObjectHasAttribute('nome_cartao', $subconta);
+        $this->assertObjectHasAttribute('documento', $subconta);
+        $this->assertObjectHasAttribute('email', $subconta);
+        $this->assertObjectHasAttribute('data_inicio', $subconta);
+        $this->assertObjectHasAttribute('data_bloqueio', $subconta);
+        $this->assertObjectHasAttribute('cep', $subconta);
+        $this->assertObjectHasAttribute('endereco', $subconta);
+        $this->assertObjectHasAttribute('numero', $subconta);
+        $this->assertObjectHasAttribute('bairro', $subconta);
+        $this->assertObjectHasAttribute('complemento', $subconta);
+        $this->assertObjectHasAttribute('cidade', $subconta);
+        $this->assertObjectHasAttribute('estado', $subconta);
+        $this->assertObjectHasAttribute('numero_cartao', $subconta);
+        $this->assertObjectHasAttribute('telefone', $subconta);
+        $this->assertObjectHasAttribute('status_cartao', $subconta);
+        $this->assertObjectHasAttribute('nm_boletos_carga_pendentes', $subconta);
+    }
+    
+    public function testAdicionarSaldo()
+    {
+        $credencial = "eb2af021c5e2448c343965a7a80d7d090eb64164";
+        $chave = "a834d47e283dd12f50a1b3a771603ae9dfd5a32c";
+        $tokenSubconta = "b2240b16b373446935a2a7ab437577a823f22eaa";
+        
+        $PJBankContaDigital = new pjbank\ContaDigital($credencial, $chave);        
+        $subconta = $PJBankContaDigital->Subcontas->adicionarSaldoSubconta($tokenSubconta, 50);
+        
+        $this->assertObjectHasAttribute('nosso_numero', $subconta);
+        $this->assertObjectHasAttribute('link_boleto', $subconta);
+        $this->assertObjectHasAttribute('linha_digitavel', $subconta);
+    }        
+
+}
+

@@ -1,0 +1,18 @@
+ListaGerarBoletos 	CREATE ALGORITHM=UNDEFINED DEFINER=`facilitasmart2`@`%` SQL SECURITY DEFINER VIEW `ListaGerarBoletos` AS select `c`.`id` AS `condominio_id`,`c`.`resumo` AS `resumo`,`u`.`bloco_quadra` AS `bloco_quadra`,`u`.`descricao` AS `descricao`,`u`.`gera_titulo` AS `gera_titulo`,`u`.`valor_titulo` AS `valor_titulo`,`u`.`desconto_titulo` AS `desconto_titulo`,`p`.`nome` AS `nome` from ((`unidade` `u` join `pessoa` `p` on((`u`.`proprietario_id` = `p`.`id`))) join `condominio` `c` on((`u`.`condominio_id` = `c`.`id`))) order by `p`.`nome`,`u`.`bloco_quadra`,`u`.`descricao`
+
+ListaGerarBoletosLote 	CREATE ALGORITHM=UNDEFINED DEFINER=`facilitasmart2`@`%` SQL SECURITY DEFINER VIEW `ListaGerarBoletosLote` AS select `c`.`id` AS `condominio_id`,`c`.`resumo` AS `resumo`,`u`.`bloco_quadra` AS `bloco_quadra`,`u`.`descricao` AS `descricao`,`u`.`gera_titulo` AS `gera_titulo`,`u`.`valor_titulo` AS `valor_titulo`,`u`.`desconto_titulo` AS `desconto_titulo`,`p`.`nome` AS `nome` from ((`unidade` `u` join `pessoa` `p` on((`u`.`proprietario_id` = `p`.`id`))) join `condominio` `c` on((`u`.`condominio_id` = `c`.`id`))) order by `p`.`nome`,`u`.`bloco_quadra`,`u`.`descricao`
+
+vw_BoletosPjBank 	CREATE ALGORITHM=UNDEFINED DEFINER=`facilitasmart2`@`%` SQL SECURITY DEFINER VIEW `vw_BoletosPjBank` AS select `unidade`.`id` AS `id`,`unidade`.`descricao` AS `descricao`,`pessoa`.`nome` AS `nome`,`contas_receber`.`valor` AS `valor`,`contas_receber`.`dt_vencimento` AS `dt_vencimento`,`contas_receber`.`pjbank_pedido_numero` AS `pjbank_pedido_numero`,`contas_receber`.`dt_limite_desconto_boleto_cobranca` AS `dt_limite_desconto_boleto_cobranca`,`contas_receber`.`desconto_boleto_cobranca` AS `desconto_boleto_cobranca`,`contas_receber`.`multa_boleto_cobranca` AS `multa_boleto_cobranca`,`contas_receber`.`juros_boleto_cobranca` AS `juros_boleto_cobranca`,`contas_receber`.`condominio_id` AS `condominio_id`,`contas_receber`.`classe_id` AS `classe_id`,`contas_receber`.`mes_ref` AS `mes_ref` from ((`contas_receber` join `unidade` on((`contas_receber`.`unidade_id` = `unidade`.`id`))) join `pessoa` on((`unidade`.`proprietario_id` = `pessoa`.`id`))) where (((`contas_receber`.`boleto_status` = '2') or (`contas_receber`.`boleto_status` = '4')) and (`contas_receber`.`situacao` = '0'))
+
+vw_ContasReceberListCobranca 	CREATE ALGORITHM=UNDEFINED DEFINER=`facilitasmart2`@`%` SQL SECURITY DEFINER VIEW `vw_ContasReceberListCobranca` AS select `unidade`.`id` AS `id`,`unidade`.`descricao` AS `descricao`,`pessoa`.`nome` AS `nome`,sum(`contas_receber`.`valor`) AS `valor`,`contas_receber`.`condominio_id` AS `condominio_id`,count(0) AS `cobrancas` from ((`contas_receber` join `unidade` on((`contas_receber`.`unidade_id` = `unidade`.`id`))) join `pessoa` on((`unidade`.`proprietario_id` = `pessoa`.`id`))) where ((`contas_receber`.`situacao` = '0') and (`contas_receber`.`dt_vencimento` <= now())) group by `unidade`.`id`,`unidade`.`descricao`,`pessoa`.`nome`,`contas_receber`.`condominio_id`
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`facilitasmart2`@`%` SQL SECURITY DEFINER VIEW 
+`vw_ContasReceberListCobranca2` AS 
+select 
+    `unidade`.`id` AS `id`,
+    `unidade`.`bloco_quadra` AS `bloco_quadra`,
+    `unidade`.`descricao` AS `unidade`,
+    `pessoa`.`nome` AS `nome`,
+    sum(`contas_receber`.`valor`) AS `valor`,
+    `contas_receber`.`condominio_id` AS `condominio_id`,
+    count(0) AS `cobrancas` from ((`contas_receber` join `unidade` on((`contas_receber`.`unidade_id` = `unidade`.`id`))) join `pessoa` on((`unidade`.`proprietario_id` = `pessoa`.`id`))) where ((`contas_receber`.`situacao` = '0') and (`contas_receber`.`dt_vencimento` <= now())) group by `unidade`.`id`,`unidade`.`descricao`,`pessoa`.`nome`,`contas_receber`.`condominio_id`
