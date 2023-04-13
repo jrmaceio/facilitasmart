@@ -3,7 +3,7 @@
         <icon></icon>
         <action>MesRefImovel</action>
     </menuitem>
-    <menuitem label='Mês Ref.'>
+    <menuitem label='Mês Ref'>
         <icon></icon>
         <action>MesRef</action>
     </menuitem>
